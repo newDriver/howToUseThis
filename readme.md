@@ -1,15 +1,15 @@
-###git日常使用操作
+### git日常使用操作
 ***
 ## 本地连接到远程git仓库
 
-####配置Git
-#####首先在本地创建ssh key；
+#### 配置Git
+##### 首先在本地创建ssh key；
 		$ ssh-keygen -t rsa -C "emailAddress"
-#####github上在 Account Settings（账户配置），的SSH Keys中Add SSH Key
+##### github上在 Account Settings（账户配置），的SSH Keys中Add SSH Key
 		C盘找到ssh文件夹，进去找到打开id_rsa.pub，复制里面的key。粘贴到gitHub
-#####验证是否成功连接
+##### 验证是否成功连接
 		ssh -T git@github.com，第一次的会提示是否continue，输入yes就会看到
-#####配置本地帐号信息
+##### 配置本地帐号信息
 	git config --global user.name "name"
 	git config --global user.email "emailAddress"
 
@@ -17,7 +17,7 @@
 
 如果没有 ，在根据远程库进行操作 可以先克隆再操作：git clone /path/to/repository 
 ****
-##工作流
+## 工作流
 ```
 你的本地仓库由 git 维护的三棵"树"组成。第一个是你的 工作目录，它持有实际文件；第二个是 暂存区（Index），它像个缓存区域，临时保存你的改动；最后是 HEAD，它指向你最后一次提交的结果。
 你可以提出更改（把它们添加到暂存区），使用如下命令：
